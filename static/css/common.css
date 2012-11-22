@@ -1,0 +1,213 @@
+/**
+ * @author      Pierre-Henry Soria <ph7software@gmail.com>
+ * @copyright   (c) 2012, Pierre-Henry Soria. All Rights Reserved.
+ * @license     CC-BY License - http://creativecommons.org/licenses/by/3.0/
+ */
+
+/***** Global *****/
+body {
+  font-family: Arial,Verdana,Helvetica,sans-serif;
+  font-size: 12px;
+  color: ##666;
+  background: white url('data:image/jpg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAPAAA/+4ADkFkb2JlAGTAAAAAAf/bAIQABgQEBAUEBgUFBgkGBQYJCwgGBggLDAoKCwoKDBAMDAwMDAwQDA4PEA8ODBMTFBQTExwbGxscHx8fHx8fHx8fHwEHBwcNDA0YEBAYGhURFRofHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8f/8AAEQgBAAEsAwERAAIRAQMRAf/EAE4AAQEBAQAAAAAAAAAAAAAAAAABAggBAQAAAAAAAAAAAAAAAAAAAAAQAQEAAAAAAAAAAAAAAAAAAAAREQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDowAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgEAgEAgEAgEAgEAgEBICwCAQCAQCAQEgLAIBASAoEAAgEAgEAAgJAUCAkBqAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQGoBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAbgJAIBAICwEgLASAQCAsBIBAWAQEgLASAQCAsBIBAWAQEgEBYCQFgEBIBAICwEgLAagEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEBuAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQG4BAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAbgEBIBAIBAWAkAgEBYCQCAQCAQCAQCAsBIBAIBAIBAWAkBYCQFgEBIBAIBAIBAbgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEBuAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQGoBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAIBAagEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEAgEBqAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQCAQACAQCAQCAQCAQCAQCAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/9k=') repeat-x;
+  margin-top: 20px;
+}
+
+.center, #container {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+header {
+  text-shadow: 0 .9em #ccc,0 0 8px rgba(255,255,255,.6);
+  margin-bottom: 40px;
+}
+
+footer {
+  font-size: 11px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  padding: 1px 10px;
+  clear: both;
+  border-top: 1px dotted #999;
+}
+
+.warning_block {
+  background-color: #f17a7a;
+  width: 340px;
+  color: #fff;
+  margin-top: 1px;
+  margin-bottom: 10px;
+  padding: 3px;
+  text-align: center;
+  border-radius: 3px;
+}
+.warning_block p {
+  font-size:.8em;
+}
+
+#result_frame {
+  margin-top: 20px;
+  width: 100%;
+  height: 400px;
+  border: 0;
+}
+
+.hidden{display:none}
+
+/***** Forms *****/
+form {
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+legend {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+label {
+    display: block;
+}
+
+input {
+  margin: 6px;
+  height: 24px;
+  font-size: 16px;
+}
+
+input[type=submit] {
+  border: 2px outset #A6BEDE;
+  width: 190px;
+  height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  border: 2px outset white;
+  background-color: #CDEB8B;
+}
+
+input[type=submit]:active {
+  border: 2px inset #A6BEDE;
+  background-color: #A6BEDE;
+  color: black;
+}
+
+input, textarea, select {
+  border: 1px solid #ccc;
+  color: #3F3F3F;
+  text-shadow: 0 1px 0 rgba(200, 200, 200, .6);
+  box-shadow: 1px 1px 4px #aaa inset;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 0;
+  border-color: rgba(82,168,236,.8);
+  box-shadow: 1px 1px 4px #aaa inset,0 0 8px rgba(82,168,236,.6);
+}
+
+input,textarea {
+  padding: 7px;
+}
+
+input, textarea, select, fieldset {
+  border-radius: 5px;
+}
+
+button {
+  margin: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  width: 160px;
+  height: 26px;
+}
+
+border:hover,border:active {
+  border-color: 2px solid #000;
+}
+
+input:focus:invalid, input:focus {
+  background-position: 99%;
+  background-repeat: no-repeat;
+}
+
+input:focus:invalid {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAhFJREFUeNpi/P//PwMlgImBQsACY6xiZPQAUi1Q7vF/DAy5v4GMH1BFbBBam5GBIRjINALibWH//8+CGwBU3BJRUmL84/v3/zdPn5a8fuqUJdBzJjB5ILuTgY3N7fevX++AhvQChbaDxBlhYbCAkTENyErTNjeXVNTWlvr57dvvM/v23Xn96lUsPx9fjqiUlN2DGzeuAzVnszIwPATSDFFAvXAD5jMyMvxiYDAGOj0cyHUyd3RU4hEQ4L937dozdg4OhhsXL54DOjcdqPkFK8hmHAaA/fwXaBBQwUw9Q0N1BiYm9tvXrt36/v27DiPEK2AgDjUAHgaPENEiChSsVZKSkv7x8SPbradPbwjy8vJ/+/Pn0pffv/VAlvwB4lfo0fgDEpAgyRoFUVFTMWZmsWtPn97++PPnxPtv3pxlZ2XlAspt+4crHYAMAJqeLsHL663GxCT15NOnF29//lwIdPJcoMagR9++beVhYZEHstt+Q9SiGgD0t/xPBoZUaw4O+e+/fn098/HjeSB/zieg3D+Iy/Kf/PmzFmiREVCzI4YBQMW5hlxckjx//7Js/fTpPpBfD1T0HqYQakgd0IAzQDmPH9BEiGyAgw07u+SlX7/ePv/7dwdQ49nvQPHvEDm4IUCX1gD5r4De0ENJSNHApPwfkpTfMgPDAhhlD5BSIQNa4CkCxSSW/f9/nHHAcyNAgAEAxF3igbzwV7kAAAAASUVORK5CYII=');
+}
+
+input:focus:valid {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAANkE3LLaAgAAAiZJREFUeJzVkk9IkwEchp9v+6bTmWYtLQU3NSnSwkyUAhFMsIQ6bC4vFVQmjA6DgiKCIsSLQUVEN+2WqBWClKBEWoIJm1NaBQvTliapC/f/259vXyclKoRu9Z7f5/D7vQ/8X7mI3vKg2WXrszm0pzJq/w6+QkFL9/l3bq9bmffPK532zjmdNbNZtV6woOYGeYDwG3wNg7Wy9dXZmtN7FvwLLAaXmFmZNgi5gSqBG2wxKLm2AyUlxzdnpBd22Yf20s6XNVZzVVN2psLyzFJlLpBiMip09L99yKOpx+9DSZrELJ1gu2yuvZ6TnodKpTDimTR/YuUugK5ds+9cmflFQ0WN3h/7hpxMpdd5j2H3mCsUoYFbfFVHKynNNyw25m3NRJeaiigquyYCnvvFTboTJw8d7qmrKNdHEmH8Uoi+qS5GZ+2jq0GO0MEygJpqltI3RayFu+dERYiwM1efHVB5ja2mugvlRcU5khzGH//Ok8keHO7ZiWWfcpQOfGsnCgDGOwxfslKfliIgkoYia0lR9MQlHbK0jSGHk3Gnd9ATTZq4ifTzf0WAYIDu1cWc+iLjDqIkSYg+wswgk8mI/SNvxmOjng/JY/Qh/zqQCCBFGLC7Er5GY3VWAhUxvITkIAMOJ69fhvs/t8VMgPInPdQAsTHC0kFpf8n2/FIpLhAKiww6phkaXno62xY1beTXujT629QUZPNcm0JcIyLOu7S9M21Sy0bwv5EfWrTcPhcTr2YAAAAASUVORK5CYII=');
+}
+
+/***** Progress Bar *****/
+/* Some code below come from the library Twitter Bootstrap */
+.progress {
+  overflow: hidden;
+  height: 18px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  background-color: #f7f7f7;
+  background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
+  background-image: -ms-linear-gradient(top, #f5f5f5, #f9f9f9);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
+  background-image: -o-linear-gradient(top, #f5f5f5, #f9f9f9);
+  background-image: linear-gradient(top, #f5f5f5, #f9f9f9);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#f9f9f9', GradientType=0);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  width: 650px;
+}
+.progress .bar {
+  width: 0%;
+  height: 18px;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #0e90d2;
+  background-image: -moz-linear-gradient(top, #149bdf, #0480be);
+  background-image: -ms-linear-gradient(top, #149bdf, #0480be);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
+  background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
+  background-image: -o-linear-gradient(top, #149bdf, #0480be);
+  background-image: linear-gradient(top, #149bdf, #0480be);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#149bdf', endColorstr='#0480be', GradientType=0);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: width 0.6s ease;
+  -moz-transition: width 0.6s ease;
+  -ms-transition: width 0.6s ease;
+  -o-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+}
+
+/***** Links *****/
+a {
+  color: #08c;
+  outline-style: none;
+  cursor: pointer;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+  text-shadow: 0 0 5px #fff,0 0 8px rgba(255,255,255,.6);
+}
