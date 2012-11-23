@@ -55,7 +55,9 @@ footer {
   border: 0;
 }
 
-.hidden{display:none}
+.hidden{
+  display:none;
+}
 
 /***** Forms *****/
 form {
@@ -167,6 +169,7 @@ input:focus:valid {
   border-radius: 4px;
   width: 650px;
 }
+
 .progress .bar {
   width: 0%;
   height: 18px;

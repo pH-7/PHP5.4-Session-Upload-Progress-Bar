@@ -27,7 +27,9 @@ function UploadBar()
         {
             console.log('Upload cancelled');
         });
+
         this.resetProgressBar();
+        $('#upload_progress').delay(2000).fadeOut();
     };
 
     this.progress = function()
@@ -36,6 +38,7 @@ function UploadBar()
         {
             var sPercentage = iPercentage + '%';
 
+            $('#upload_progress').show();
             $('#upload_progress .bar').html(sPercentage);
             $('#upload_progress .bar').width(sPercentage);
 

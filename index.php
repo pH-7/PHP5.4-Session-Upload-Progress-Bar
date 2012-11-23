@@ -35,7 +35,6 @@ require_once 'Upload.class.php';
   <!-- Debug Mod --> <!-- <form action="upload.php?show_transfer=on" method="post" id="upload_form" enctype="multipart/form-data" target="result_frame"> -->
   <form action="upload.php" method="post" id="upload_form" enctype="multipart/form-data" target="result_frame">
       <fieldset>
-          <p class="msg hidden"></p>
           <legend>Upload Images</legend>
           <input type="hidden" name="<?php echo ini_get('session.upload_progress.name');?>" value="<?php Upload::UPLOAD_PROGRESS_PREFIX ?>" />
           <label for="file">Images: <input type="file" name="files[]" id="file" multiple="multiple" accept="image/*" required="required" />
@@ -44,7 +43,7 @@ require_once 'Upload.class.php';
           <button type="reset" id="cancel">Cancel Upload</button>
 
       <!-- Progress bar here -->
-      <div id="upload_progress" class="center progress">
+      <div id="upload_progress" class="hidden center progress">
           <div class="bar"></div>
       </div>
 
