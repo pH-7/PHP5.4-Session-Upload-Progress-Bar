@@ -7,9 +7,15 @@
  * @version        1.0.0
  */
 
+/**
+ * Check the version of PHP
+ */
 if (version_compare(phpversion(), '5.4.0', '<'))
     exit('ERROR: Your PHP version is ' . phpversion() . ' but this script requires PHP 5.4.0 or higher.');
 
+/**
+ * Check if "session upload progress" is enabled
+ */
 if (!intval(ini_get('session.upload_progress.enabled')))
     exit('session.upload_progress.enabled is not enabled, please activate it in your PHP config file to use this script.');
 
