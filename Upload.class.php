@@ -72,23 +72,28 @@ class Upload
             {
                 for($i = 0, $iNumFiles = count($aFiles['tmp_name']); $i < $iNumFiles; $i++)
                 {
+                    /**
+                     * Assign values ​​of array in simple variables.
+                     */
                     $iErrCode = $aFiles['error'][$i];
+                    $iSize = $aFiles['size'][$i];
                     $sFileName = $aFiles['name'][$i];
                     $sTmpFile = $aFiles['tmp_name'][$i];
-                    $sFileDest = $this->_sUploadDir . $aFiles['name'][$i];
+                    $sFileDest = $this->_sUploadDir . $sFileName;
+                    $sTypeFile = $aFiles['type'][$i];
 
                     /**
                      * Check files.
                      */
                     $bIsImgExt = (strtolower(substr(strrchr($sFileName, '.'), 1))); // Get the file extension
-                    if(($bIsImgExt == 'jpeg' || $bIsImgExt == 'jpg' || $bIsImgExt == 'png' || $bIsImgExt == 'gif') && (strstr($aFiles['type'][$i], '/', true) === 'image'))
+                    if(($bIsImgExt == 'jpeg' || $bIsImgExt == 'jpg' || $bIsImgExt == 'png' || $bIsImgExt == 'gif') && (strstr($sTypeFile, '/', true) === 'image'))
                     {
                         if($iErrCode == UPLOAD_ERR_OK)
                         {
                             move_uploaded_file($sTmpFile, $sFileDest);
                             $this->_sMsg .= '<p style="color:green; font-weight:bold; text-align:center">Successful "' . $sFileName . '" file upload!</p>';
-                            $this->_sMsg .= '<p style="text-align:center">Image type: ' . str_replace('image/', '', $aFiles['type'][$i]) . '<br />';
-                            $this->_sMsg .= 'Size: ' . round($aFiles['size'][$i] / 1024) . ' KB<br />';
+                            $this->_sMsg .= '<p style="text-align:center">Image type: ' . str_replace('image/', '', $sTypeFile) . '<br />';
+                            $this->_sMsg .= 'Size: ' . round($iSize / 1024) . ' KB<br />';
                             $this->_sMsg .= '<a href="' . $sFileDest . '" title="Click here to see the original file" target="_blank"><img src="' . $sFileDest . '" alt="' . $sFileName  . '" width="300" height="250" style="border:1.5px solid #ccc; border-radius:5px" /></a></p>';
                         }
                         else
