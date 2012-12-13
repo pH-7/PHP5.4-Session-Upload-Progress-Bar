@@ -132,7 +132,7 @@ border:hover,border:active {
   border-color: 2px solid #000;
 }
 
-input:focus:invalid, input:focus {
+input:focus {
   background-position: 99%;
   background-repeat: no-repeat;
 }
