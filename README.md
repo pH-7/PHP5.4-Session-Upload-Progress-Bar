@@ -1,6 +1,6 @@
 # PHP 5.4 - File Upload Progress Bar
 
-This is an example to create a progress bar using PHP 5.4 to calculate the progress of a file being downloaded.
+This is an example how to create a progress bar using PHP 5.4 to calculate the progress of a file being downloaded.
 
 I also used the jQuery framework to query AJAX to know the percentage of the progress in real time.
 
